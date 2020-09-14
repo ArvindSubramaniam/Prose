@@ -14,7 +14,7 @@ namespace ProseTutorial
         {
         }
 
-        [WitnessFunction(nameof(Semantics.Substring), 1)]
+        [WitnessFunction(nameof(Semantics.add), 1)]
         public ExampleSpec WitnessStartPosition(GrammarRule rule, ExampleSpec spec)
         {
             var result = new Dictionary<State, object>();
@@ -33,7 +33,7 @@ namespace ProseTutorial
             return new ExampleSpec(result);
         }
 
-        [WitnessFunction(nameof(Semantics.Substring), 2)]
+        [WitnessFunction(nameof(Semantics.add), 2)]
         public ExampleSpec WitnessEndPosition(GrammarRule rule, ExampleSpec spec)
         {
             var result = new Dictionary<State, object>();
